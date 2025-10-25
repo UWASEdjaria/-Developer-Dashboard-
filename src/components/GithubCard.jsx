@@ -13,7 +13,8 @@ function GithubCard() {
   if (!user) return <p className="text-center mt-4">Loading...</p>;
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 w-60 text-center">
+     <div className='grid grid-cols-1 p-2 bg-white rounded-lg shadow-lg w-72 h-96  transition-all duration-300 hover:scale-105'>
+        <h2 className='text-xl sm:text-1xl md:text-2xl lg:text-3xl font-bold'>GitHub</h2>
       <img
         src={user.avatar_url}
         alt={user.login}

@@ -17,8 +17,10 @@ function WeatherCard() {
   }
 
   return (
-    <div className="bg-blue-200 shadow-lg rounded-lg p-4 w-60 text-center">
-      <h2 className="text-lg font-bold">
+ <div className='flex flex-row gap-6 justify-center items-center mt-5'>
+    <div className='grid grid-cols-1 items-start p-2 bg-white rounded-lg shadow-lg w-72 h-96 transition-all duration-300 hover:scale-105'>
+      <h2 className='text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold'>Current Weather
+        <GithubCard/>
         {weather.location.name}, {weather.location.country}
       </h2>
       <img
@@ -28,6 +30,7 @@ function WeatherCard() {
       />
       <p className="text-2xl font-bold mt-2">{weather.current.temp_c}°C</p>
       <p>{weather.current.condition.text}</p>
+    </div>
     </div>
   );
 }
