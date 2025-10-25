@@ -13,17 +13,19 @@ function GithubCard() {
   if (!user) return <p className="text-center mt-4">Loading...</p>;
 
   return (
-     <div className='grid grid-cols-1 p-2 bg-white rounded-lg shadow-lg w-72 h-96  transition-all duration-300 hover:scale-105'>
-        <h2 className='text-xl sm:text-1xl md:text-2xl lg:text-3xl font-bold'>GitHub</h2>
+    <div className='flex flex-row font-sans'>
+     <div className='grid grid-cols-1 p-2  bg-white rounded-lg shadow-lg w-80 h-96  transition-all duration-300 hover:scale-105'>
+        <h2 className='text-xl  sm:text-1xl md:text-2xl lg:text-3xl font-bold'>GitHub</h2>
       <img
         src={user.avatar_url}
         alt={user.login}
-        className="rounded-full w-24 h-24 mx-auto"
+        className="rounded-full w-24 h-24"
       />
       <h2 className="text-lg font-bold mt-2">{user.login}</h2>
       <p>Repos: {user.public_repos}</p>
       <p>Followers: {user.followers}</p>
       <p>Following: {user.following}</p>
+    </div>
     </div>
   );
 }
