@@ -1,16 +1,97 @@
-# React + Vite
+# 🌦️ Developer Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React dashboard that displays GitHub user data and current weather for Kigali.
+Includes a Light/Dark theme toggle, responsive UI, and organized folder structure using hooks + context.
 
-Currently, two official plugins are available:
+# ✅ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔥 Fetch GitHub profile details using GitHub API
 
-## React Compiler
+🌤️ Live weather info using WeatherAPI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⏱️ Real-time clock inside Weather Card
 
-## Expanding the ESLint configuration
+🌓 Light / Dark mode theme toggle
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📱 Fully responsive and modern UI
+
+🧩 Clean code using Custom Hooks & Context
+
+# 🚀 Tech Stack
+Technology	Usage
+React.js	Main framework
+Tailwind CSS	Styling
+React Router	Navigation
+WeatherAPI	Weather data
+GitHub REST API	GitHub user data
+
+# 📂 Project Structure
+Developer-Dashboard/
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── GithubCard.jsx
+│   │   └── WeatherCard.jsx
+│   │
+│   ├── hooks/
+│   │   └── useWeather.js   # Fetches weather data
+│   │
+│   ├── context/
+│   │   └── ThemeContext.jsx # Light/Dark mode state
+│   │
+│   ├── App.js
+│   ├── index.css
+│   └── main.jsx
+│
+├── public/
+│   └── index.html
+│
+└── package.json
+
+⚙️ Setup & Installation
+
+Clone the project:
+
+git clone https://github.com/YOUR-USERNAME/Developer-Dashboard.git
+cd Developer-Dashboard
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
+npm run dev
+
+# 🔑 API Keys Required
+
+To make Weather feature work:
+
+1️⃣ Create an account at https://www.weatherapi.com
+
+2️⃣ Generate your API key
+3️⃣ Replace the key inside useWeather.js:
+
+const url = "https://api.weatherapi.com/v1/current.json?key=YOUR_KEY&q=Kigali&aqi=no";
+
+# 🧠 Learning Goals
+
+Practice API fetching in React
+
+Improve UI layout using Tailwind
+
+Learn global state with Context API
+
+Build and deploy a practical mini-project
+
+# 👩‍💻 Developed By
+
+Uwase Djaria
+Aspiring Frontend Developer
+
+GitHub: https://github.com/UWASEdjaria
+
+LinkedIn: https://www.linkedin.com/in/djaria-uwase
