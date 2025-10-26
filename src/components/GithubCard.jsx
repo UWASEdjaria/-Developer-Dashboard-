@@ -14,23 +14,22 @@ function GithubCard() {
 
   return (
     <div className='flex flex-row font-sans'>
-     <div className='grid grid-cols-1 p-1  bg-white rounded-lg shadow-lg w-80 h-96 transition-all duration-300 hover:scale-105'>
-        <h2 className='text-2xl font-bold mb-2'>GitHub</h2>
+     <div className='grid grid-cols-1 p-1 bg-black dark:bg-white rounded-lg shadow-lg w-80 h-96 transition-all duration-300 hover:scale-105'>
+        <h2 className='text-2xl font-bold mb-2 bg-white text-black'>GitHub</h2>
       <img
         src={user.avatar_url}
         alt={user.login}
         className="rounded-full  w-30 h-30 "
       />
     
-      <span className='text-center space-y-2 text-xl md:text-2xl lg:text-3xl font-bold '> {user.public_repos} </span>
-      <p className='text-center  text-lg md:text-xs lg:text-xl'>Repos</p>
+      <span className='text-center space-y-2 text-xl md:text-2xl lg:text-3xl font-bold dark:text-black text-black'> {user.public_repos} </span>
+      <p className='text-center text-lg md:text-xs lg:text-xl dark:text-black'>Repos</p>
       
-      
-      <span className='text-center m-2 space-y-2 text-xl md:text-2xl lg:text-3xl  font-bold'>{user.followers} </span>
-      <p  className='text-center text-lg md:text-xs lg:text-xl'>Followers</p>
+      <span className='text-center m-2 space-y-2 text-xl md:text-2xl lg:text-3xl font-bold dark:text-black text-black'>{user.followers} </span>
+      <p className='text-center text-lg md:text-xs lg:text-xl dark:text-black text-gray-700'>Followers</p>
 
-      <span className='text-center space-y-2 text-xl md:text-2xl  lg:text-4xl font-bold'> {user.following}</span> 
-      <p  className='text-center  text-lg md:text-xs lg:text-xl'>Following</p>
+      <span className='text-center space-y-2 text-xl md:text-2xl lg:text-4xl font-bold dark:text-black text-black'> {user.following}</span> 
+      <p className='text-center text-lg md:text-xs lg:text-xl dark:text-black text-gray-700'>Following</p>
     </div>
     </div>
    
