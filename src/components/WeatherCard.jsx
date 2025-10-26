@@ -36,16 +36,15 @@ function WeatherCard() {
   return (
     <div className="flex justify-center font-sans">
       <div className="bg-white text-black shadow-lg rounded-lg p-5 w-80 flex flex-col justify-between h-96">
-        {/* Top content */}
+      
         <div className="text-center">
           <h2 className="text-2xl font-bold mb-2">Current Weather</h2>
 
-          {/* Location */}
+         
           <p className="font-semibold mb-5 p-5">
             {weather.location.name}, {weather.location.country}
           </p>
 
-          {/* Icon + Temperature inline */}
           <div className="flex items-center justify-center gap-2 mb-4">
             <img
               src={weather.current.condition.icon}
