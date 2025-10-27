@@ -9,7 +9,7 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
-      <div className={dark ? "bg-gray-900 text-white min-h-screen" : "bg-gray-100 text-black min-h-screen"}>
+      <div className={`${dark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'} min-h-screen transition-colors duration-200`}>
         {children}
       </div>
     </ThemeContext.Provider>

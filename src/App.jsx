@@ -9,13 +9,10 @@ function App() {
   
 
   return (
-   <div className='bg-blue-100'>
+   <div>
        <Navbar/>
        <Dashboard/>
-       
-       
-        
-    </div>
+   </div>
   )
 }
 

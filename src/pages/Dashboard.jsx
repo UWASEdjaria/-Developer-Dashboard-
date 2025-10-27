@@ -6,6 +6,7 @@ function Dashboard() {
   return (
 
         <div className='flex flex-row justify-center min-h-screen gap-6 '>
+          
         <WeatherCard/>
         <GithubCard/>
        

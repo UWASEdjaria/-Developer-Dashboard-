@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { ThemeContext } from '../context/Themecontext';
 
 function WeatherCard() {
+  const { dark } = useContext(ThemeContext);
   const [weather, setWeather] = useState(null);
   const [time, setTime] = useState("");
 
@@ -35,7 +37,9 @@ function WeatherCard() {
 
   return (
     <div className="flex justify-center font-sans">
-      <div className="flex flex-col justify-between p-3 rounded-lg shadow-lg p- w-80 h-96">
+      <div className={`flex flex-col justify-between p-3 rounded-lg shadow-lg w-80 h-96 transition-colors duration-200 ${
+        dark ? 'bg-gray-800 text-white' : 'bg-white text-black'
+      }`}>
       
         
           <h2 className="mb-2 text-2xl font-bold">Current Weather</h2>
