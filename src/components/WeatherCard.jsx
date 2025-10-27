@@ -31,17 +31,17 @@ function WeatherCard() {
     return () => clearInterval(interval);
   }, [weather]);
 
-  if (!weather) return <p className="text-center mt-4 font-semibold">Loading weather...</p>;
+  if (!weather) return <p className="mt-4 font-semibold text-center">Loading weather...</p>;
 
   return (
     <div className="flex justify-center font-sans">
-      <div className="bg-white text-black shadow-lg rounded-lg p-5 w-80 flex flex-col justify-between h-96">
+      <div className="flex flex-col justify-between p-3 rounded-lg shadow-lg p- w-80 h-96">
       
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Current Weather</h2>
+        
+          <h2 className="mb-2 text-2xl font-bold">Current Weather</h2>
 
          
-          <p className="font-semibold mb-5 p-5">
+          <p className="p-5 mb-5 font-semibold">
             {weather.location.name}, {weather.location.country}
           </p>
 
@@ -49,7 +49,7 @@ function WeatherCard() {
             <img
               src={weather.current.condition.icon}
               
-              className="w-16 h-16 sm:w-20 sm:h-20  m-2 "
+              className="w-16 h-16 m-2 sm:w-20 sm:h-20 "
             />
             <span className="text-4xl font-bold">{weather.current.temp_c}°C</span>
           </div>
@@ -57,16 +57,16 @@ function WeatherCard() {
           {/* Condition and Wind */}
           <div className="flex flex-col items-center">
            
-            <p className="text-lg flex items-center gap-6">
+            <p className="flex items-center gap-6 text-lg">
               <span>Wind</span>
               <span className="font-bold">{weather.current.wind_kph} kph</span>
             </p>
-          </div>
+        
         </div>
 
         {/* Bottom content: Time */}
-        <div className="text-center mt-4">
-          <p className="text-lg flex items-center justify-center gap-6  mb-5">
+        <div className="mt-4 text-center">
+          <p className="flex items-center justify-center gap-6 mb-5 text-lg">
             <span>Time</span>
             <span className="font-bold">{time}</span>
           </p>
